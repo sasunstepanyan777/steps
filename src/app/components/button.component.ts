@@ -2,7 +2,16 @@ import { Component } from '../../core/core';
 
 @Component({
     selector: 'app-button',
-    template: `<button id="button">Click</button>`
+    extends: 'a',
+    template: 'Click'
 })
-export class ButtonComponent extends HTMLElement {
+export class ButtonComponent extends HTMLAnchorElement {
+
+    constructor() {
+        super();
+        this.addEventListener('click', ($e: any): void => {
+            $e.preventDefault();
+            console.log('asdasd');
+        });
+    }
 }

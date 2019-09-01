@@ -26,7 +26,7 @@ export default (env: any): IWebpackConfig => {
 		context: join(__dirname, 'src'),
 
 		entry: {
-			polyfills: ['@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js'],
+			polyfills: ['@webcomponents/custom-elements/custom-elements.min.js'],
 			main: './main.ts',
 			styles: './styles.scss'
 		},
@@ -43,7 +43,7 @@ export default (env: any): IWebpackConfig => {
 		module: {
 			rules: [
 				{
-					test: /.tsx?$/,
+					test: /.ts?$/,
 					exclude: /(node_modules|bower_components|custom-elements)/,
 					loader: 'ts-loader'
 				},
@@ -80,6 +80,7 @@ export default (env: any): IWebpackConfig => {
 			publicPath: '/',
 			host: '0.0.0.0',
 			overlay: true,
+			historyApiFallback: true,
 			stats: {
 				colors: true,
 				assets: false,

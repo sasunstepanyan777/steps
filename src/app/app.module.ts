@@ -7,6 +7,7 @@ import { ButtonComponent } from './components/button.component';
 
 // Providers
 import { AppService } from './app.service';
+import { RouterModule } from '../router/router.module';
 
 @SsModule({
     components: [
@@ -14,7 +15,8 @@ import { AppService } from './app.service';
         ButtonComponent
     ],
     imports: [
-        HttpModule
+        HttpModule,
+        RouterModule
     ],
     providers: [
         AppService
