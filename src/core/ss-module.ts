@@ -46,7 +46,7 @@ export function SsModule(config: IModuleDecorator) {
                     constructor() {
                         super(...injections);
                     }
-                });
+                }, Component.extends && { extends: Component.extends });
             }
         }
     };

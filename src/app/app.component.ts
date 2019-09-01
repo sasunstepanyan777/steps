@@ -1,11 +1,11 @@
-import { Component } from '../core/core';
+import { Component, ConnectedCallback } from '../core/core';
 import { AppService } from './app.service';
 
 @Component({
     selector: 'app-root',
     template: require('./app.component.html')
 })
-export class AppComponent extends HTMLElement {
+export class AppComponent extends HTMLElement implements ConnectedCallback {
 
     constructor(private readonly appService: AppService) {
         super();
