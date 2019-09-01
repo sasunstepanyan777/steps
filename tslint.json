@@ -13,7 +13,9 @@
         "trailing-comma": false,
         "callable-types": false,
         "new-parens": false,
-        "ordered-imports": false
+        "ordered-imports": false,
+        "indent": false,
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }
