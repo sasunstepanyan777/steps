@@ -10,8 +10,11 @@ export class RouterLinkComponent extends HTMLAnchorElement implements ConnectedC
   constructor(private readonly router: Router) {
     super();
     this.addEventListener('click', ($event): void => {
+      const queries = this.getAttribute('queries').replace(/'/g, '"');
+      const parsed = JSON.parse(queries).join('&');
+      console.log(parsed);
       $event.preventDefault();
-      this.router.navigate(this.href);
+      this.router.navigate(`${this.href}?${parsed}`);
     });
   }
 
