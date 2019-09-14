@@ -1,6 +1,7 @@
 const http = require('http');
 
 const PORT = 3000;
+const HOST = 'localhost';
 
 const server = http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -12,6 +13,6 @@ const server = http.createServer((req, res) => {
     res.end();
 });
 
-server.listen(PORT, 'localhost', () => {
-    `Server listenin on ${PORT}`;
+server.listen(PORT, HOST, () => {
+    process.stdout.write(`Server listening on ${HOST}:${PORT}`);
 })

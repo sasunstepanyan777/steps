@@ -1,3 +1,3 @@
 export { Component } from './component';
 export { SsModule } from './ss-module';
-export * from './lifecycle';
+export * from './lifecycles';
