@@ -1,8 +1,8 @@
 import 'reflect-metadata';
-import { IModuleDecorator } from './models/module.model';
+import { IModule } from './models/module.model';
 import { Type } from './models/type';
 
-export function SsModule(config: IModuleDecorator) {
+export function SsModule(metadata: IModule) {
 
     return (mod: any): void => {
 
@@ -23,8 +23,8 @@ export function SsModule(config: IModuleDecorator) {
         mod.container = {};
 
         // Resolve imports
-        if (config.imports) {
-            for (const imp of config.imports) {
+        if (metadata.imports) {
+            for (const imp of metadata.imports) {
                 mod.container = {
                     ...mod.container,
                     ...imp.container
@@ -32,14 +32,16 @@ export function SsModule(config: IModuleDecorator) {
             }
         }
 
-        // Resolve providers
-        for (const Provider of config.providers) {
-            resolve(Provider as Type<any>);
+        if (metadata.providers) {
+            // Resolve providers
+            for (const Provider of metadata.providers) {
+                resolve(Provider as Type<any>);
+            }
         }
 
         // Resolve components
-        if (config.components) {
-            for (const Component of config.components) {
+        if (metadata.components) {
+            for (const Component of metadata.components) {
                 const tokens = Reflect.getMetadata('design:paramtypes', Component) || [];
                 const injections = tokens.map((token: Type<any>): Type<any> => mod.container[token.name]);
                 customElements.define(Component.selector, class extends Component {

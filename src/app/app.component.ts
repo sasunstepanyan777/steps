@@ -12,10 +12,10 @@ export class AppComponent extends HTMLElement implements ConnectedCallback {
     }
 
     public connectedCallback(): void {
-        this.appService.getData().subscribe(
-            (result: any): void => {
-                console.log(result.data);
-            }
-        );
+        // this.appService.getData().subscribe(
+        //     (result: any): void => {
+        //         console.log(result.data);
+        //     }
+        // );
     }
 }
