@@ -1,12 +1,19 @@
-import { IComponentDecorator } from './models/component.model';
+import { IComponent } from './models/component.model';
 
-export function Component(config: IComponentDecorator)  {
+export function Component(metadata: IComponent)  {
     return <T extends {new(...args: any[]): {}}>(constructor: T): any => {
-        validateSelector(config.selector);
+        validateSelector(metadata.selector);
         return class extends constructor {
-            public static selector = config.selector;
-            public static extends = config.extends;
-            public innerHTML = config.template || '';
+            public static selector = metadata.selector;
+            public static extends = metadata.extends;
+            public innerHTML: string;
+
+            public connectedCallback(): void {
+                this.innerHTML = metadata.template || '';
+                if (constructor.prototype.connectedCallback) {
+                    constructor.prototype.connectedCallback.call(this);
+                }
+            }
         };
     };
 }
