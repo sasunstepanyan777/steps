@@ -32,9 +32,11 @@ export function SsModule(metadata: IModule) {
             }
         }
 
-        // Resolve providers
-        for (const Provider of metadata.providers) {
-            resolve(Provider as Type<any>);
+        if (metadata.providers) {
+            // Resolve providers
+            for (const Provider of metadata.providers) {
+                resolve(Provider as Type<any>);
+            }
         }
 
         // Resolve components
