@@ -43,7 +43,7 @@ export default (env: any): IWebpackConfig => {
 		module: {
 			rules: [
 				{
-					test: /.ts?$/,
+					test: /.ts$/,
 					exclude: /(node_modules|bower_components|custom-elements)/,
 					loader: 'ts-loader'
 				},

@@ -1,4 +1,4 @@
-import { Component } from '../../core/core';
+import { Component } from '@stepsas/core';
 
 @Component({
     selector: 'app-button',

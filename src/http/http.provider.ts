@@ -2,7 +2,7 @@ import { ajax, AjaxResponse } from 'rxjs/ajax';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-import { Provider } from '../core/provider';
+import { Provider } from '@stepsas/core';
 
 @Provider()
 export class HttpProvider {

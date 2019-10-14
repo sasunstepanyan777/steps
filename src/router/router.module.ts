@@ -1,4 +1,4 @@
-import { SsModule } from '../core/core';
+import { SsModule } from '@stepsas/core';
 import { Router } from './router';
 import { Routes } from './models/routes';
 

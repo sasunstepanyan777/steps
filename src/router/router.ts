@@ -1,4 +1,4 @@
-import { Provider } from '../core/provider';
+import { Provider } from '@stepsas/core';
 import { Routes } from './models/routes';
 
 @Provider()

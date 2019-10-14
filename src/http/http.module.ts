@@ -1,4 +1,4 @@
-import { SsModule } from '../core/core';
+import { SsModule } from '@stepsas/core';
 import { HttpProvider } from './http.provider';
 
 @SsModule({

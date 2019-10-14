@@ -1,4 +1,4 @@
-import { Component, ConnectedCallback } from '../core/core';
+import { Component, ConnectedCallback } from '@stepsas/core';
 import { Router } from './router';
 
 @Component({
