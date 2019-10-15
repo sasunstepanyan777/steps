@@ -1,7 +1,7 @@
 {
-  "name": "@stepsas/core",
-  "version": "0.1.5",
-  "description": "Core package for stepsas",
+  "name": "@stepsas/http",
+  "version": "0.0.2",
+  "description": "Http package for stepsas",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/sasunstepanyan777/steps.git"
   },
   "keywords": [
-    "core",
+    "http",
     "stepsas",
     "single",
     "page"
@@ -23,8 +23,10 @@
     "url": "https://github.com/sasunstepanyan777/steps/issues"
   },
   "homepage": "https://github.com/sasunstepanyan777/steps#readme",
-  "dependencies": {},
   "devDependencies": {
     "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@stepsas/core": "^0.1.5"
   }
 }
