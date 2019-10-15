@@ -1,6 +1,6 @@
-import { IComponent } from './models/component.model';
+import { IComponentMetadataConfig } from '../models/component.metadata.model';
 
-export function Component(metadata: IComponent)  {
+export function Component(metadata: IComponentMetadataConfig)  {
     return <T extends {new(...args: any[]): {}}>(constructor: T): any => {
         validateSelector(metadata.selector);
         return class extends constructor {

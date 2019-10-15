@@ -1,8 +1,8 @@
 import 'reflect-metadata';
-import { IModule } from './models/module.model';
-import { Type } from './models/type';
+import { IModuleMetadataConfig } from '../models/module.metadata.model';
+import { Type } from '../models/type';
 
-export function SsModule(metadata: IModule) {
+export function SsModule(metadata: IModuleMetadataConfig) {
 
     return (mod: any): void => {
 

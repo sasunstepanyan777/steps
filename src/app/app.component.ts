@@ -1,4 +1,4 @@
-import { Component, ConnectedCallback, DisconnectedCallback } from '../core/core';
+import { Component, ConnectedCallback, DisconnectedCallback } from '@stepsas/core';
 import { AppService } from './app.service';
 import { Subscription } from 'rxjs';
 

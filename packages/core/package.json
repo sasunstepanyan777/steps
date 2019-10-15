@@ -1,0 +1,16 @@
+{
+  "name": "@stepsas/core",
+  "version": "0.1.5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasunstepanyan777/steps.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "main": "./dist/index.js",
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  }
+}
