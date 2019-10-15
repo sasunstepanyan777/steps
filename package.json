@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@stepsas/core": "^0.1.5",
+    "@stepsas/http": "0.0.2",
     "@webcomponents/custom-elements": "^1.2.4",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"

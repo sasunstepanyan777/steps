@@ -1,5 +1,5 @@
 import { Provider } from '@stepsas/core';
-import { HttpProvider } from '../http/http.provider';
+import { HttpProvider } from '@stepsas/http';
 import { Observable } from 'rxjs';
 
 @Provider()

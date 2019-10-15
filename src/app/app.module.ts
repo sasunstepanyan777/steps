@@ -1,5 +1,5 @@
 import { SsModule } from '@stepsas/core';
-import { HttpModule } from '../http/http.module';
+import { HttpModule } from '@stepsas/http';
 
 // Components
 import { AppComponent } from './app.component';
