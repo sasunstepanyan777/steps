@@ -1,6 +1,6 @@
 {
   "name": "@stepsas/core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Core package for stepsas",
   "main": "./dist/index.js",
   "scripts": {
@@ -23,7 +23,9 @@
     "url": "https://github.com/sasunstepanyan777/steps/issues"
   },
   "homepage": "https://github.com/sasunstepanyan777/steps#readme",
-  "dependencies": {},
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
   "devDependencies": {
     "typescript": "^3.6.4"
   }
